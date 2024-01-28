@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserPlus} from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 
 function Formulario({ agregarColaborador, setAlerta }) {
@@ -21,7 +21,6 @@ function Formulario({ agregarColaborador, setAlerta }) {
 
     const nuevoColaborador = { nombre, correo, edad, cargo, telefono };
     agregarColaborador(nuevoColaborador);
-    // Restablecer los campos del formulario después de agregar el colaborador
     setNombre('');
     setCorreo('');
     setEdad('');
@@ -31,7 +30,7 @@ function Formulario({ agregarColaborador, setAlerta }) {
 
   return (
     <Form onSubmit={handleSubmit} className='text-center mb-2'>
-      <h3 className="mb-4" ><FontAwesomeIcon icon={faUserPlus}/>Agregar colaborador</h3>
+      <h3 className="mb-4" ><FontAwesomeIcon icon={faUserPlus} />Agregar colaborador</h3>
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Control type="text" placeholder="Nombre del colaborador" value={nombre} onChange={(e) => setNombre(e.target.value)} />
       </Form.Group>
